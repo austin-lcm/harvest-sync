@@ -1,0 +1,33 @@
+###############################################################################
+# Harvest Automation – Runtime Configuration
+###############################################################################
+
+# 🔑  Authentication
+harvest_token   = "harvest_pat_XXXXXXXXXXXXXXXXXXXXXXXX"
+harvest_account = 12345678
+
+# 📅  Calendar feed
+ics_url         = "https://calendar.google.com/calendar/ical/your-feed.ics"
+
+# 🏗  Default project/task mappings
+default_project = 12345678      # billable
+default_task    = 12345678
+nonbill_project = 12345678      # non-billable
+nonbill_task    = 12345678
+nonbill_keywords  = ["internal"] 
+default_billable  = true
+
+# 🪄  Fallbacks & filters
+default_jira  = "DP-00000"
+clone_tag     = "(clone)"
+skip_keywords = ["PTO", "OOO", "Holiday", "Busy", "Appointment"]
+billable_keywords = ["Client", "Project", "Billable"]
+
+# 📝  Note template (last token = mutable end-time)
+note_template  = "{jira} | {title} | {date} | {start} | {end}"
+date_format    = "%Y-%m-%d"
+time_format    = "%I:%M %p"
+key_separator  = " | "
+
+# 🌍  Time-zone
+timezone       = "America/New_York"
