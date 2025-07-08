@@ -78,11 +78,11 @@ timezone          = "America/New_York"
 
 | Command                                                                                        | Action                                    |
 |------------------------------------------------------------------------------------------------|-------------------------------------------|
-| `harvest-sync run`                                                                             | Sync **Mon → today** (EST)                |
-| `harvest-sync run --start-date 2025-06-01 --end-date 2025-06-07`                               | Sync the explicit range                   |
-| `harvest-sync run -n`                                                                          | *Dry-run* — log actions, no writes        |
-| `python -m harvest_automation run …`                                                           | Same, via the module entry-point          |
-| `harvest-sync run --help`                                                                      | Full CLI reference                        |
+| `uv run python -c "from harvest_automation.helpers import fetch_entries_pretty as f; print(f())"`| Query Harvest to easily determine task and project ids. |
+| `uv run harvest-sync`                                                                             | Sync **Mon → today** (EST)                |
+| `uv run harvest-sync --start-date 2025-06-01 --end-date 2025-06-07`                               | Sync the explicit range                   |
+| `uv run harvest-sync -n`                                                                          | *Dry-run* — log actions, no writes        |
+| `uv run harvest-sync --help`                                                                      | Full CLI reference                        |
 
 ---
 
@@ -104,5 +104,3 @@ uv pip list --outdated   # show what would change
 | HTTP 401/403 from Harvest API                                            | Invalid `harvest_token` or token lacks API access.                  |
 
 ---
-
-Made with ❤️ and [`uv`](https://github.com/astral-sh/uv)
