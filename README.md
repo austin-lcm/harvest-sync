@@ -1,6 +1,9 @@
 # Harvest Automation
 
 Synchronise Google Calendar (or any ICS feed) into Harvest on **duration-mode** accounts.
+Main improvement comes from using either Google or Microsoft Teams calendars.  
+Be sure to always include the Jira Ticket/Issue (DP-12345) or update regex pattern to accomodate different patterns.
+Workflow change, when pairing or working on specific issues, send over a "meeting" to other participants, and everyone can symbiotically help others create time entries.
 
 ---
 
