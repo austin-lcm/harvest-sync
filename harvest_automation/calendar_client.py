@@ -9,9 +9,9 @@ from typing import Iterable
 from zoneinfo import ZoneInfo
 
 import httpx
-from icalendar import Calendar  # ≥5.0.0 :contentReference[oaicite:5]{index=5}
+from icalendar import Calendar
 from recurring_ical_events import (
-    of as rrule_of,  # between(start, end) only :contentReference[oaicite:6]{index=6}
+    of as rrule_of,
 )
 
 from .classify import is_billable
@@ -80,7 +80,7 @@ async def fetch_events(
     *,
     ics_url: str | None = None,
 ) -> list[EventBlock]:
-    """Return EventBlocks within [start, end] – already de-duplicated."""
+    """Return EventBlocks within [start, end] - already de-duplicated."""
     raw_ics = await _download(ics_url or _cfg.ics_url)
     cal = Calendar.from_ical(raw_ics)
 

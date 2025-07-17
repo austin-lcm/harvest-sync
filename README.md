@@ -40,7 +40,7 @@ harvest-sync run --dry-run
 
 ```toml
 ###############################################################################
-# Harvest Automation – Runtime Configuration
+# Harvest Automation - Runtime Configuration
 ###############################################################################
 # Create and access Harvest Developer Access Tokens here: https://id.getharvest.com/developers
 # 🔑  Authentication
