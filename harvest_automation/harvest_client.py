@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from datetime import date
-from typing import Any, Dict, List
+from typing import Any
 
 import httpx
 
@@ -33,10 +33,10 @@ class HarvestClient:
                 "Harvest account is configured for start/end timers."
             )
 
-    async def list_entries(self, start: date, end: date) -> List[Dict[str, Any]]:
+    async def list_entries(self, start: date, end: date) ->  list[dict[str, Any]]:
         url = f"{_BASE}/time_entries"
-        params: Dict[str, Any] = {"from": str(start), "to": str(end), "per_page": 2000}
-        entries: list[Dict[str, Any]] = []
+        params: dict[str, Any] = {"from": str(start), "to": str(end), "per_page": 2000}
+        entries: list[dict[str, Any]] = []
 
         while url:
             r = await self._cli.get(url, params=params)
@@ -47,7 +47,7 @@ class HarvestClient:
             params = None  # params only on first request
         return entries
 
-    async def create_entry(self, payload: Dict[str, Any]) -> None:
+    async def create_entry(self, payload: dict[str, Any]) -> None:
         r = await self._cli.post(f"{_BASE}/time_entries", json=payload)
         r.raise_for_status()
 

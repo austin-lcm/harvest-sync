@@ -3,12 +3,11 @@
 from __future__ import annotations
 
 from dataclasses import replace
-from typing import List
 
 from .models import EventBlock
 
 
-def split_overlaps(blocks: List[EventBlock]) -> List[EventBlock]:
+def split_overlaps(blocks:  list[EventBlock]) ->  list[EventBlock]:
     """Split partially-overlapping EventBlock intervals so none overlap."""
     # Sort by start time
     blocks.sort(key=lambda b: b.begin)

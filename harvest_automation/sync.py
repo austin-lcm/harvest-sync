@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import logging
 from datetime import date, datetime
-from typing import Dict, Tuple
 from zoneinfo import ZoneInfo
 
 from .calendar_client import fetch_events
@@ -33,7 +32,7 @@ async def _fetch_existing_entries(
     hc: HarvestClient,
     start: date,
     end: date,
-) -> Tuple[set[tuple[str, str]], Dict[tuple[str, str], dict]]:
+) -> tuple[set[tuple[str, str]], dict[tuple[str, str], dict]]:
     """Return (approved_keys, editable_rows) from Harvest in one pass."""
     rows = await hc.list_entries(start, end)
     approved = {

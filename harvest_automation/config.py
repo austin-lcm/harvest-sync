@@ -5,7 +5,7 @@ import os
 import tomllib
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Final, Tuple
+from typing import Final
 
 _CFG_PATH_ENV: Final[str] = "CONFIG_PATH"
 # repo root = …/harvest-sync
@@ -32,9 +32,9 @@ class Config:
     # Business rules
     default_jira: str
     clone_tag: str
-    skip_keywords: Tuple[str, ...]
-    billable_keywords: Tuple[str, ...]
-    nonbill_keywords: Tuple[str, ...]
+    skip_keywords: tuple[str, ...]
+    billable_keywords: tuple[str, ...]
+    nonbill_keywords: tuple[str, ...]
     default_billable: bool
 
     # Note-building
