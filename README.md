@@ -11,7 +11,7 @@ Workflow change, when pairing or working on specific issues, send over a "meetin
 
 ```bash
 # 1. Clone & enter the repo
-git clone https://github.com/your-org/harvest-automation.git
+git clone https://github.com/austin-lcm/harvest-sync.git
 cd harvest-automation
 
 # 2. Create an isolated env and install in editable mode (Python ≥ 3.13)
