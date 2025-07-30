@@ -1,6 +1,4 @@
 # harvest_automation/classify.py
-from __future__ import annotations
-
 
 def is_billable(
     title_lower: str,
