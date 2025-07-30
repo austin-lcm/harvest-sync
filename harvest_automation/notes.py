@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 from zoneinfo import ZoneInfo
 
 from .config import load_config
