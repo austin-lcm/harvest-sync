@@ -1,7 +1,3 @@
-# harvest_automation/calendar_client.py
-
-from __future__ import annotations
-
 import re
 from collections import defaultdict
 from datetime import datetime

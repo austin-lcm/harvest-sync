@@ -1,4 +1,3 @@
-# harvest_automation/overlap.py
 from dataclasses import replace
 
 from .models import EventBlock

@@ -1,4 +1,3 @@
-# harvest_automation/classify.py
 
 def is_billable(
     title_lower: str,

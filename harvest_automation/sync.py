@@ -1,4 +1,3 @@
-# harvest_automation/sync.py
 import logging
 from datetime import date, datetime
 from zoneinfo import ZoneInfo

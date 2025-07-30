@@ -1,4 +1,3 @@
-# harvest_automation/helpers.py
 import asyncio
 import json
 import logging

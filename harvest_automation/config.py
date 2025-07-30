@@ -1,4 +1,3 @@
-# harvest_automation/config.py
 import os
 import tomllib
 from dataclasses import dataclass
