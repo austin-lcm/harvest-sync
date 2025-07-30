@@ -6,7 +6,7 @@
  - Any approved/submitted days will be skipped.
  - Defaults to most recently occuring Monday (12:00 AM EST) for start date, and current day for end date (11:59 PM EST).
 
-**Be sure to always include the Jira Ticket/Issue (AA-12345) somewhere in the title of EVERY meeting or update regex pattern to accomodate different patterns.**
+**Be sure to always include the Jira Ticket/Issue (AA-12345) somewhere in the title of EVERY meeting.**
 
 **Update your regex pattern if your Jira Ticket/Issue naming pattern is different than `_JIRA_RE = re.compile(r"\b[A-Z]{2,}-\d+\b")`**
 
